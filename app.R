@@ -5,7 +5,12 @@
 # Find out more about building applications with Shiny here:
 #
 #    http://shiny.rstudio.com/
-#
+#    NOTE: Inorder to use the background image create www folder in the directory of your code file and 
+#    copy the image in that folder
+#    Project
+#    |->app.r
+#    |->www
+#       |-> img.jpg
 
 library(shiny)
 ui <- fluidPage(theme = shinytheme("superhero"),
@@ -49,7 +54,7 @@ ui <- fluidPage(theme = shinytheme("superhero"),
   
 )
 
-# Define server logic required to draw a histogram
+# Define server logic 
 server <- function(input, output) {
   data1 <- read.csv("clean_diamond_data.csv")
   #mod4<-lm(log(price)~ cut + clarity + color + I(carat^(1/3)) + carat, data = data1)
